@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+/* Left section - Search */
+.weather-input {
+    width: 25%;
+    position: fixed;
+    inset: 0;
+    background: #78c1f3;
+    padding: 1rem 2.5rem;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.weatherIcon {
+    background-position: 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: contain;
+    display: block;
+    height: 25%;
+    margin: 2rem auto;
+}
+
+.input-group input {
+    background: #f8f8f8;
+    text-transform: capitalize;
+    padding: 1rem;
+    font-size: 15px;
+    border-radius: 6px;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding-right: 90px;
+    /* ✅ add space for dropdown + icon */
+}
+
+.input-group .converter {
+    position: absolute;
+    right: 45px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.input-group .fa-search {
+    position: absolute;
+    right: 15px;
+    color: #606060;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Right section - Output */
+.weather-output {
+    width: 75%;
+    position: fixed;
+    inset: 0;
+    margin-left: 25%;
+    padding: 2rem;
+    background: #f6f6f6;
+    overflow: auto;
+}
+
+
+.temperature{
+    font-size: 5rem;
+    text-align: center;
+    display: flex;
+    font-weight: 200;
+}
+
+/* Highlights section */
+.Highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-auto-flow: row;
+    row-gap: 1rem;
+    column-gap: 10px;
+}
+
+.forecast{
+    display: grid;
+    grid-template-columns: repeat(4,260px);
+    grid-auto-flow: row;
+    row-gap: 1rem;
+    column-gap: 10px;
+}
+
+.Highlights div ,
+.forecast div {
+    height: 200px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #78c1f3;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.Highlights i {
+    font-size: 45px;
+}
+
+
+.sun-times span {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+/* Weekly forecast section */
+.forecast {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.forecast .day {
+  background-color: #78c1f3;   /* same as Highlights */
+  border-radius: 20px;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;                 /* white text for contrast */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.forecast .day img {
+  width: 50px;
+  height: 50px;
+  margin: 0.5rem 0;
+}.forecast .day p {
+  margin: 4px 0;
+}
+
+.forecast .day p:last-child {
+  font-style: italic;
+  color: #f0f0f0;  /* softer text for description */
+}
+
